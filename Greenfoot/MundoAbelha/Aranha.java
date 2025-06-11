@@ -23,5 +23,11 @@ public class Aranha extends Inseto
             move(2);
         }
         verificarCanto();
+        interseptarAbelha();
+    }
+    //Virando em direção a abelha
+    public void interseptarAbelha(){
+        BeeWorld beeW = (BeeWorld) getWorld();
+        turnTowards(beeW.getAbelha().getX(),beeW.getAbelha().getY());
     }
 }
