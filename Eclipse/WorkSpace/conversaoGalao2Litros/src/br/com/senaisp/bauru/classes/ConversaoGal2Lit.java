@@ -7,13 +7,15 @@ public class ConversaoGal2Lit {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		System.out.println(" Favor digitar a quantidade de galões:");
-		
+		System.out.println("Favor digitar a "
+				+ "quantidade de galões: ");
+		final double GAL2LIT = 3.785;
+	
 		double galao = sc.nextDouble();
 		double litros = galao * 3.785;
 
-		// fazendo a Conversão e mostrando
-		System.out.println(galao + " galões é igual a " + litros + " litros ");
+		//Fazendo a conversão e mostrando
+		System.out.println(galao + " galões é igual a " + litros + " litros");
 		sc.close();
 	}
 
