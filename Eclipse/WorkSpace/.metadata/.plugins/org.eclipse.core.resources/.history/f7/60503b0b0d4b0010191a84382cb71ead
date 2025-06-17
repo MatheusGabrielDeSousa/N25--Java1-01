@@ -1,0 +1,21 @@
+package br.com.senaisp.bauru.aula05;
+
+import java.util.Scanner;
+
+public class Exemplo03 {
+	/// ctrl+1 serve como atalho para correção de erros
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" Digite sua data de nascimento: ");
+		String dtNasc = sc.next(); // Criando um scanner de apoio
+		Scanner sc2 = new Scanner(dtNasc); //passando o texto
+		sc2.useDelimiter("/"); //Serve para utilizar outro delimitador, além do padrão /
+		int dia = sc2.nextInt();
+		int mes = sc2.nextInt();
+		int ano = sc2.nextInt();
+		System.out.println(" Você tem " + (2025 - ano) + " anos " );
+		sc.close();
+		sc2.close();
+	}
+
+}

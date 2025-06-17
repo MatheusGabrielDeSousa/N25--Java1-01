@@ -1,0 +1,19 @@
+package br.com.senaisp.bauru.aula05;
+
+import java.util.Scanner;
+
+public class Exemplo03 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		sc.useDelimiter("/"); //Serve para utilizar outro delimitador, além do padrão
+		System.out.println(" Digite sua data de nascimento: ");
+		int dia = nextInt();
+		int mes = nextInt();
+		int ano = nextInt();
+		System.out.println(" Você tem " + (2025 - ano) + " anos " );
+		sc.close();
+		
+	}
+
+}
