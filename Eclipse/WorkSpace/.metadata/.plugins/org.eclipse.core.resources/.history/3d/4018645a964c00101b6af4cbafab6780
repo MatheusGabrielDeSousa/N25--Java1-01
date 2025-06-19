@@ -1,0 +1,37 @@
+package br.com.senaisp.bauru.aula05;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		// Usando scanner para ler um arquivo de texto // abaixo seria para localizar e abrir o conteudo do arquivo
+		Scanner sc = new Scanner(Exercicio01.class.getResourceAsStream("arquivo.txt"));
+
+		String linha = sc.nextLine(); // pegando cabeçalho
+		Scanner sca = new Scanner(linha);
+		sca.useDelimiter(";");
+		// imprimindo o cabeçalho
+		while (sca.hasNext()) {
+			System.out.print(sca.next() + "\t\t"); // só o print não coloca a quebra de linhas
+		} // "\" funciona como tab
+		System.out.println();// pulando a linha
+		sca.close(); // fechando scanner de apoio, para não ocupar memoria
+		while (sc.hasNextLine()) { // ler por linha
+			linha = sc.nextLine();
+			sca = new Scanner(linha).useLocale(Locale.US);
+			sca.useDelimiter(";"); // Delimitador
+			// Imprimindo o nome
+			System.out.print(sca.next() + "\t"); // nome, 'next' pega textos
+			// Imprimindo a idade
+			System.out.print(sca.nextInt() + "\t");
+			// Imprimindo salário
+			System.out.println(sca.nextDouble());// salário
+			// fechando scanner de apoio
+			sca.close();
+		}
+		sc.close();
+
+	}
+}
