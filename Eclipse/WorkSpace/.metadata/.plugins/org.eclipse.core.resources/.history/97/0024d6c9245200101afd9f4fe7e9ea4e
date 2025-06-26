@@ -1,0 +1,23 @@
+package br.com.senaisp.bauru.aula07;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public final class Triangulo extends Desenho {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Triangulo(int posY, int posX, Color cor) {
+		super(posY, posX, cor);
+
+	}
+
+	@Override
+	protected void desenharForma(Graphics g) {
+		
+	}
+
+}

@@ -1,0 +1,41 @@
+package br.com.senaisp.bauru.aula07;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Retangulo extends Desenho {
+	private int comprimento;
+	private int largura;
+	
+	private static final long serialVersionUID = 1L;
+
+	public Retangulo(int posY, int posX, int larg, int comp, Color cor) {
+		super(posY, posX, cor);
+		comprimento = comp;
+		largura = larg;
+	}
+
+	public int getComprimento() {
+		return comprimento;
+	}
+
+	public void setComprimento(int comprimento) {
+		this.comprimento = comprimento;
+	}
+
+	public int getLargura() {
+		return largura;
+	}
+
+	public void setLargura(int largura) {
+		this.largura = largura;
+	}
+
+	@Override
+	protected void desenharForma(Graphics g) {
+      //Setando a cor, e onde será preenchido no grafico
+		g.setColor(getCor());
+      g.fillRect(getPosX(), getPosY(), getComprimento(), getLargura());
+	}
+
+}

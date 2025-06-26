@@ -30,8 +30,8 @@
 			<item value="2"/>
 		</list>
 		<list key="textArray">
-			<item value="gett"/>
 			<item value="get"/>
+			<item value="gett"/>
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
